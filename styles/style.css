@@ -100,6 +100,7 @@
   line-height: 23.4px;
   color: var(--subtitle-font-color);
   background-color: var(--marker-color);
+  margin-block-end: 20px;
 }
 
 .subtitle__header {
@@ -162,3 +163,72 @@
   line-height: 23.4px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  margin-block-end: 60px;
+}
+
+
+
+.main__subtitle {
+  margin-block-end: 20px;
+}
+
+.sunset {
+  background-image: url(../images/sunset.png);
+  background-size: cover;
+  grid-column: 1/3;
+}
+
+.ice-cream{
+  height: 595px;
+  background-image: url(../images/ice-cream.png);
+  grid-row: 1/3;
+  grid-column: 3/4;
+  background-size: cover;
+  background-position: center;
+}
+
+.tape {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  background-image: url(../images/tape.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.books {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background-image: url(../images/books.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.street {
+  grid-row: 3/4;
+  grid-column: 2/4;
+  background-image: url(../images/street.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.footer__containeer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title__footer {
+  color: var(--font-color);
+text-shadow: 2px 2px 0px var(--title-shadow-color);
+font-family: IBM Plex Mono;
+font-size: 157px;
+font-style: normal;
+font-weight: 700;
+line-height: 82.5%; /* 129.525px */
+}
