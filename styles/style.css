@@ -1,6 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 :root {
   --ears: 20px;
+  --block-interval: 60px;
+  --block-interval-end: 80px
 }
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -161,12 +163,12 @@
 }
 
 .main {
-  margin-block: 60px;
+  margin-block: var(--block-interval);
   padding-inline: var(--ears);
 }
 
 .main__container {
-  margin-block: 80px;
+  margin-block: var(--block-interval-end);
 }
 
 .main__content__inline {
@@ -216,10 +218,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
-  margin-block-end: 60px;
-  max-height: 1000px;
+
   /* подумать как использовать clamp */
+  gap: 25px;
+  margin-block-end: var(--block-interval);
 }
 
 .main__subtitle {
@@ -292,11 +294,20 @@
   .section__title__block {
     max-width: 135px;
   }
+  .gallery {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 375px) {
   :root{
     --ears: 10px;
+    --block-interval: 40px;
+    --block-interval-end: 40px;
+  }
+  .header {
+    height: 100vh;
+    padding-block-end: 15%;
   }
   .main__container__inlines {
     display: flex;
@@ -318,6 +329,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .sunset {
@@ -349,6 +361,10 @@
     height: fit-content;
     align-self: center;
     margin-inline-end: var(--ears);
+    margin-block-start: 15%;
+  }
+  .header__theme-menu-list {
+    margin-block-start: 20%;
   }
   
 }
