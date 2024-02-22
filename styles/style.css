@@ -2,7 +2,8 @@
 :root {
   --ears: 20px;
   --block-interval: 60px;
-  --block-interval-end: 80px
+  --block-interval-end: 80px;
+  --main-font: "IBM Plex Mono";
 }
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -75,7 +76,6 @@
 
 .header__theme-menu-button {
   color: var(--accent-color);
-  font-family: IBM Plex Mono;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -103,7 +103,6 @@
 
 .bulb {
   color: var(--bulb-color);
-  font-family: IBM Plex Mono;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -131,7 +130,6 @@
 .title {
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--title-shadow-color);
-  font-family: IBM Plex Mono;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
   font-weight: 700;
@@ -207,6 +205,16 @@
   line-height: 23.4px;
 }
 
+.section__text__link {
+  text-shadow: 2px 2px var(--marker-color);
+  text-decoration: none;
+  transition: border-bottom 4s;
+}
+
+.section__text__link:hover {
+  border-bottom: 1px solid;
+}
+
 .section_subtitle_with_title {
   font-size: 18px;
   font-style: normal;
@@ -271,7 +279,6 @@
 .title__footer {
   color: var(--font-color);
   text-shadow: 2px 2px 0px var(--title-shadow-color);
-  font-family: IBM Plex Mono;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
   font-weight: 700;
