@@ -3,6 +3,9 @@
   и их переопределение под различные устройства
 */
 :root {
+  --ears: 20px;
+  --block-interval: 60px;
+  --block-interval-end: 80px;
   --accent-color: #ff0070;
   --title-color: #DB00FF;
   --title-shadow-color: #ff0070;

@@ -1,10 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 :root {
   --ears: 20px;
   --block-interval: 60px;
   --block-interval-end: 80px;
   --main-font: "IBM Plex Mono";
 }
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--font-color);
