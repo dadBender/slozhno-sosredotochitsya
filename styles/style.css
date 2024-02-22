@@ -5,6 +5,7 @@
   --block-interval: 60px;
   --block-interval-end: 60px;
   --main-font: "IBM Plex Mono";
+  --main-font-size: 18px;
 }
 
 .page {
@@ -77,7 +78,7 @@
 
 .header__theme-menu-button {
   color: var(--accent-color);
-  font-size: 18px;
+  font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
@@ -111,7 +112,7 @@
 
 .bulb {
   color: var(--bulb-color);
-  font-size: 18px;
+  font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
@@ -150,7 +151,7 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
@@ -207,7 +208,7 @@
 
 .section__title {
   color: var(--accent-color);
-  font-size: 18px;
+  font-size: var(--main-font-size);
 }
 
 .section_subtitle {
@@ -215,7 +216,7 @@
 }
 
 .section__text {
-  font-size: 18px;
+  font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
@@ -240,7 +241,7 @@
 }
 
 .section_subtitle_with_title {
-  font-size: 18px;
+  font-size: var(--main-font-size);
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
