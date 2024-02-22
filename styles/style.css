@@ -3,7 +3,7 @@
 :root {
   --ears: 20px;
   --block-interval: 60px;
-  --block-interval-end: 80px;
+  --block-interval-end: 60px;
   --main-font: "IBM Plex Mono";
 }
 
@@ -31,7 +31,7 @@
 .header_angle_top {
   content: "";
   width: 25px;
-  height: 2px;
+  height: 1px;
   background-color: var(--accent-color);
   position: absolute;
   top: var(--ears);
@@ -40,7 +40,7 @@
 
 .header_angle_top:after {
   content: "";
-  width: 2px;
+  width: 1px;
   height: 25px;
   background-color: var(--accent-color);
   position: absolute;
@@ -50,7 +50,7 @@
 .header_angle_bottom {
   content: "";
   width: 25px;
-  height: 2px;
+  height: 1px;
   background-color: var(--accent-color);
   position: absolute;
   bottom: var(--ears);
@@ -59,7 +59,7 @@
 
 .header_angle_bottom:after {
   content: "";
-  width: 2px;
+  width: 1px;
   height: 25px;
   background-color: var(--accent-color);
   position: absolute;
@@ -73,7 +73,6 @@
   gap: 10px;
   list-style-type: none;
   position: relative;
-  margin-block-start: var(--ears);
 }
 
 .header__theme-menu-button {
@@ -96,6 +95,14 @@
   /* pointer-events: none; */
   /* box-sizing: border-box; */
 }
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color)   ;
+}
+
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
@@ -132,14 +139,13 @@
 .title {
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--title-shadow-color);
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-size: clamp(120px, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
 }
 
 .title__header {
-  margin-inline-start: var(--ears);
   position: relative;
   align-self: center;
 }
@@ -155,11 +161,14 @@
 }
 
 .subtitle__header {
+  position: relative;
   justify-self: end;
-  width: 50%;
+  width: 48%;
   height: fit-content;
   align-self: center;
   margin-inline-end: var(--ears);
+  bottom: 39px;
+  
 }
 
 .main {
@@ -168,7 +177,9 @@
 }
 
 .main__container {
-  margin-block: var(--block-interval-end);
+  margin-block-start: var(--block-interval-end);
+  margin-block-end: 69px;
+
 }
 
 .main__content__inline {
@@ -178,8 +189,8 @@
 .main__container__inlines {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 23.9px repeat();
-  gap: 20px;
+  /* grid-template-rows: 23.9px repeat(); */
+  gap: 10px;
 }
 
 .main__container__block {
@@ -189,11 +200,18 @@
 }
 
 .section__title__block {
+  width: 33%;
   grid-column: 1 / 4;
 }
 
+.section__title__inlines {
+  grid-row: 1 / 3;
+}
+
+
 .section__title {
   color: var(--accent-color);
+  font-size: 18px;
 }
 
 .section_subtitle {
@@ -205,6 +223,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
+  margin-block: 10px;
 }
 
 .section__text__link {
@@ -215,6 +234,13 @@
 
 .section__text__link:hover {
   border-bottom: 1px solid;
+}
+.section__text__link:focus {
+  outline: none;
+}
+.section__text__link:focus-visible {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 0px;
 }
 
 .section_subtitle_with_title {
@@ -227,15 +253,16 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
 
   /* подумать как использовать clamp */
-  gap: 25px;
+  gap: 20px;
   margin-block-end: var(--block-interval);
 }
 
 .main__subtitle {
-  margin-block-end: 20px;
+  margin-block-end: 12px;
+  align-self: start;
 }
 
 
@@ -247,16 +274,19 @@
 
 .sunset {
   grid-column: 1/3;
+  max-height: 260px;
 }
 
 .ice-cream {
   grid-row: 1/3;
   grid-column: 3/4;
+  max-height: 595px;
 }
 
 .tape {
   grid-row: 2/4;
   grid-column: 1/2;
+  max-height: 768px;
 }
 
 .books {
@@ -268,6 +298,7 @@
 .street {
   grid-row: 3/4;
   grid-column: 2/4;
+  max-height: 428px;
 }
 
 .footer__containeer {
@@ -291,15 +322,47 @@
   .header__theme-menu-list {
     align-items: end;
     margin-inline-end: 20px;
-    /* margin-block-start: 146px;  */
+    margin-block-start: 73px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+  .title__header {
+    position: relative;
+    align-self: center;
+    bottom: 24px;
+  
+  }
+  .subtitle__header {
+    position: relative;
+    justify-self: end;
+    width: 47%;
+    height: fit-content;
+    align-self: center;
+    margin-inline-end: var(--ears);
+    bottom: 63px;
+    
+  }
+  .section_subtitle {
+    margin-block-end: 0px;
+  }
+  .section__text {
+    margin-block-end: 0px;
+  }
   .main__container__block {
+    margin-block-start: 81px;
     display: flex;
     flex-direction: column;
   }
+  .main__subtitle {
+    margin-block-end: 0px;
+  }
+  .main__container__inlines {
+    gap: 20px;
+  }
+  .main__container {
+    margin-block-end: 80px;
+  } 
   .section__title__block {
     max-width: 135px;
   }
@@ -314,53 +377,39 @@
     --block-interval: 40px;
     --block-interval-end: 40px;
   }
+
   .header {
     height: 100vh;
     padding-block-end: 15%;
   }
+
+  .bulb {
+    right: 12px;
+    top: 10px;
+  }
+
+  .header__theme-menu-list {
+    margin-block-start: 11%;
+    margin-inline-end: 10px;
+  }
+
   .main__container__inlines {
     display: flex;
     flex-direction: column;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 23.9px repeat();
+    /* grid-template-rows: 23.9px repeat(); */
     gap: 20px;
   }
   .title {
-    font-size: clamp(6rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
   .title__footer {
-    font-size: clamp(6rem, 7.0115rem + 1.0178vw, 7.5rem);
+    font-size: clamp(116px, 7.0115rem + 1.0178vw, 120px);
   }
   .title__header {
-    margin-inline-start: 0px;
-  }
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .sunset {
-    width: 100%;
-    padding-block-end: 40%;
-  }
-  
-  .ice-cream {
-    height: auto;
-    padding-block-end: 100%;
-  }
-  
-  .tape {
-    padding-block-end: 100%;
-  }
-  
-  .books {
-    padding-block-end: 100%;
-  }
-  
-  .street {
-    padding-block-end: 60%;
+    font-size: 116px;
+    max-width: 355px;
+    top: 20px;
+    left: 10px;
   }
 
   .subtitle__header {
@@ -370,12 +419,31 @@
     height: fit-content;
     align-self: center;
     margin-inline-end: var(--ears);
-    margin-block-start: 15%;
+    top: 25px
   }
-  .header__theme-menu-list {
-    margin-block-start: 20%;
+
+  .main__container {
+    margin-block-end: 51px;
   }
-  
+
+  .main__container__block {
+    margin-block-start: 51px;
+  }
+
+  .section__title__block {
+    min-width: 100%;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .books {
+    padding-block-end: 100%;
+  }  
 }
 
 
