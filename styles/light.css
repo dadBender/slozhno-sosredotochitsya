@@ -5,12 +5,12 @@
 */
 .page.theme_light {
   --accent-color: #353430;
-  --title-color: #FFC2E6;
+  --title-color: #ffc2e6;
   --title-shadow-color: #ff0070;
   --subtitle-font-color: #353430;
-  --bg-color: #FFF1F7;
-  --bg-image:  url(../images/cover-image-light.png);
-  --marker-color: #FF8DCB;
+  --bg-color: #fff1f7;
+  --bg-image: url(../images/cover-image-light.png);
+  --marker-color: #ff8dcb;
   --font-color: #353430;
   --bulb-color: rgba(0, 0, 0, 0);
   --bulb-switch: none;
@@ -24,12 +24,12 @@
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #353430;
-    --title-color: #FFC2E6;
+    --title-color: #ffc2e6;
     --title-shadow-color: #ff0070;
     --subtitle-font-color: #353430;
-    --bg-color: #FFF1F7;
-    --bg-image:  url(../images/cover-image-light.png);
-    --marker-color: #FF8DCB;
+    --bg-color: #fff1f7;
+    --bg-image: url(../images/cover-image-light.png);
+    --marker-color: #ff8dcb;
     --font-color: #353430;
     --bulb-color: rgba(0, 0, 0, 0);
     --bulb-switch: none;
