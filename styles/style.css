@@ -275,7 +275,7 @@
   line-height: 82.5%; /* 129.525px */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .header__theme-menu-list {
     align-items: end;
     margin-inline-end: 20px;
@@ -296,7 +296,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   :root{
     --ears: 10px;
     --block-interval: 40px;
