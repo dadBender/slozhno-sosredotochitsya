@@ -355,8 +355,7 @@
 }
 
 @media (max-width: 767px) {
-  :root{
-
+  :root {
     --ears: 10px;
     --block-interval: 40px;
     --block-interval-end: 40px;
@@ -423,15 +422,15 @@
   .sunset {
     max-height: fit-content;
   }
-  
+
   .ice-cream {
     max-height: fit-content;
   }
-  
+
   .tape {
     max-height: fit-content;
   }
-  
+
   .street {
     max-height: fit-content;
   }
